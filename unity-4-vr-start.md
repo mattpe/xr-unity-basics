@@ -15,24 +15,23 @@ You need to sign up for Oculus developers account (and have an Facebook account)
 
 Grading: 0-2 points.
 
-(Tested with Unity LTS version 2022.3 & Oculus Quest 2 device)
+**NOTE:** These are Unity 6 (6000.0.26) version of instructions, build might fail with some project setups.
 
-**NOTE:** Updated instructions below, build fails with version 6000.0.23.
-
-1. **Make a copy/backup** of your previous app (with 360 skybox and some POI) and open it in Unity
-    - It's used as a starting point for the first VR app
+1. You can make a copy of your previous app (with 360 skybox and some POI) and try to convert it to VR app:
+    - Can bed used as a starting point for the first VR app
     - Disable the _Camera Controller_ script component in _Main Camera_ game object
     - Move your player near to some POI object so that you can hit it with the _Raycast_ from the camera just by rotating the camera (no need to move player)
     - Fix the _Canvas_ game object to work in VR, set in Inspector:
       1. Change _Render Mode_ to _Screen Space - Camera_
       1. Choose _Render Camera_: _Main Camera_
       1. Set distance of Canvas closer to the camera (_Plane Distance_ value e.g. to 8 units)
+1. Or create a new project/scene with some 3D objects and a skybox, check settings for _Canvas_ above if needed
 1. _Edit -> Project Settings... -> XR Plugin management -> Install_ -> Choose _Oculus_ plugin for desktop & Android platforms
     - If Android platform is not available, you need to install it via Unity Hub to your Unity editor  
 1. _File -> Build Profiles_ -> Choose Android platform
     - _Texture Compression_: ASTC
     - _Switch platform_ to Android
-1. _Add Build Profile_ and click _Customize Player Settings.._ on the new profile:
+1. (Optional, default setting are ok in Unity 6, SKIP this step for now) _Add Build Profile_ and click _Customize Player Settings.._ on the new profile:
     - _Minimum API level_: must be at least 29 (Android 10)
     - _Target API level_: 32 (Android 12.0, 12L)
     - _Scipting Backend_: IL2CPP
