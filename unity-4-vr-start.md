@@ -7,9 +7,10 @@
 
 You need to sign up for Oculus developers account (and have an Facebook account) to activate the developer mode in Oculus Quest 2 device:
 
-- [create](https://developer.oculus.com/manage/organizations/create) a new organization or join to an existing one (ask teacher for a link, if needed)
-- [verify](https://developer.oculus.com/manage/verify) your developer account
-- [install Meta Quest mobile app](https://www.meta.com/en-gb/help/quest/articles/getting-started/getting-started-with-quest-2/install-meta-quest-mobile-app/) for linking the device to your account and activating the developer mode
+- [Create](https://developer.oculus.com/manage/organizations/create) a new organization or join to an existing one (ask teacher for a link, if needed)
+- [Verify](https://developer.oculus.com/manage/verify) your developer account
+- Install Meta Horizon (Quest) mobile app [android](https://play.google.com/store/apps/details?id=com.oculus.twilight) or [ios](https://apps.apple.com/us/app/meta-horizon/id1366478176) for linking the VR headset to your account and to your mobile device
+  - activate headset's _developer mode_ in the app
 
 ## Step 2: Add Oculus support to your Unity app and test building
 
