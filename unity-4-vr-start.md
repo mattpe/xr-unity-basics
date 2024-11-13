@@ -17,14 +17,15 @@ Grading: 0-2 points.
 
 (Tested with Unity LTS version 2022.3 & Oculus Quest 2 device)
 
-1. **Make a copy** of your previous app (with 360 skybox and some POI) and open it in Unity
-    - It's used as a starting point for the first VR app
+1. You can make a copy of your previous app (with 360 skybox and some POI) and try to convert it to VR app:
+    - Can bed used as a starting point for the first VR app
     - Disable the _Camera Controller_ script component in _Main Camera_ game object
     - Move your player near to some POI object so that you can hit it with the _Raycast_ from the camera just by rotating the camera (no need to move player)
     - Fix the _Canvas_ game object to work in VR, set in Inspector:
       1. Change _Render Mode_ to _Screen Space - Camera_
       1. Choose _Render Camera_: _Main Camera_
       1. Set distance of Canvas closer to the camera (_Plane Distance_ value e.g. to 8 units)
+1. **Or** create a new project/scene with some 3D objects and a skybox, check settings for _Canvas_ above if needed
 1. _Edit -> Project Settings... -> XR Plugin management -> Install_ -> Choose _Oculus_ plugin for desktop & Android platforms
     - If Android platform is not available, you need to install it via Unity Hub to your Unity editor  
 1. _File -> Build Settings_ -> Choose Android platform
