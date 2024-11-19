@@ -28,51 +28,49 @@ Remember to save the scene and test your app (_Build and run_) all the time when
 
 ### Step 1: Prepare project for Oculus device
 
+1. Create a new Unity 6 project: choose _3D (Built-in Render Pipeline) core_ template
+   - Add ground plane (e.g. _3D -> Plane_) and some material to it
+   - (or continue a previous FPV project)  
 1. _Edit -> Project Settings... -> XR Plugin management -> Install_ -> Choose _Oculus_ plugin for desktop & Android platforms
 1. _File -> Build Profiles_ -> Check [previous instructions](unity-4-vr-start.md) for Android platform build settings
 1. Go to _Window -> Package Manager_, choose _Packages: Unity Registry_ and install:
-    - _XR Interaction Toolkit_, (tested with version 2.5.3), restart if prompted
+    - _XR Interaction Toolkit_, (tested with version 3.0.7), restart if prompted
     - _XR Interaction Toolkit_ -> _Samples_ tab -> import _Starter Assets_
+    - If project validation screen appears, click _Fix All_
 
 ### Step 2: Basic movement in VR
 
-1. Find Default Input Actions in _Starter assets/Presets_ folder
-    - Select _XRI Default Left Controller_
-      - In Inspector: _Add to ActionBasedController default_
+1. Find default input actions in _Starter assets/Presets_ folder
+    - Select _XRI Default Left Controller InputActionManager_
+      - In Inspector: Click _Add to Controller Input Action Manager default_
     - Do same for the right controller
 1. _Edit -> Project Settings -> Preset Manager_
     - Check/add filters for left and right controller
-1. Add to scene: _XR -> Interaction Manager_
-1. Add to scene: _XR Origin (VR)_
+1. Add to scene: _GameObject -> XR -> Interaction Manager_
+1. Add to scene: _XR Origin (XR Rig)_ prefab, found in _Starter Assets -> Prefabs_
     - Check _XR Origin_, it should have _Input Action Manager_ script component
     - _Action Assets_ list should have one element: _XRI Default Input Actions_
-    - _XR Origin_ comes with a new _Main Camera_ and replaces the original _Player_ game object -> deactive/delete existing _Player_ and _Main Camera_
-1. Add more default interactions. From _Starter Assets/Presets_ folder, find
+    - _XR Origin_ comes with a new _Main Camera_ as a child game object and replaces the original _Player_ game object -> deactive/delete existing _Player_ and _Main Camera_
+    - Both hand controllers are also children of _XR Origin_ object
+1. Add default interactions. From _Starter Assets/Presets_ folder, find
     - _XRI Default Continuous Move_
     - _XRI Default Continuous Turn_
-    - _XRI Default Snap Turn_ -presets and add them (by clicking in Inspector).
-1. Add controller prefabs to both hand controllers, found under _XROrigin / Camera Offset_
-   - _Starter Assets -> Prefabs_. Drag to XR Controller's _Model Prefab_ variable.
-   - Check that controllers are right way up and in the correct position.
-   - Check that Left/Right XR controllers _XR Controller_ components have correct action references (left for left controller, right for right controller)
+    - _XRI Default Snap Turn_ 
+    - Choose all presets and add them (by clicking _Add ..._ in Inspector).
 1. Edit _XROrigin_ object: XROrigin (script)
     - _Tracking Origin Mode_: Floor.
-1. Add _XR -> Locomotion System_ game object
-    - Drag _XROrigin_ object to _XR Origin_ variable
-1. Add _Continuous Move Provider (Action-based)_ component to _Locomotion System_
-    - Set _System_: Locomotion System
-    - _Move Speed_: 8
-    - Select _use reference_ for Left Hand Move action and set _XRI LeftHand Locomotion / Move_
-1. Add _Continuous Turn Provider(Action-Based)_ component
-    - Set _Use Reference_: XRI RightHand Locomotion / Turn
-    - Disable the _Snap Turn Provider (Action-based)_ (or use it instead if this if you like)
-1. Edit _XR Origin_
+1. Movement setup is found under _XR origin -> Locomotion_ game object
+    - Choose movement objects and see inspector for more details
+    - For turning, you can use _Continuous Turn Provider (Action-Based)_ or _Snap Turn Provider (Action-Based)_ (snap is the default in Oculus Quest 2)
+1. If you want more control over physical appereance of the player, edit _XR Origin_:
+    - Disable _Character Controller_ component
     - Add _Rigidbody_ component
-      - _Mass_: 1000
+      - _Mass_ e.g.: 1000
       - _Collision Detection_: Continous Speculative
-      - Add Box/Cylinder Collider
-          - _Size_: 2, 2, 2
-    - Check the initial position of the _XR Origin_ ("player") object
+    - Add Box/Cylinder Collider
+      - _Size_ e.g.: 2, 2, 2
+    - Check the initial _position_ of the _XR Origin_ ("player") object, it should be on top of the floor level
+    - Edit _Locomotion_ game object: untick _Use character controller_
 1. Add a _Sphere_ to scene
     - _Scale_: .5,.5,.5
     - Add _Rigidbody_ component
