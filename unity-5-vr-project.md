@@ -88,7 +88,11 @@ Remember to save the scene and test your app (_Build and run_) all the time when
     - Place _Anchor_ child object on platform where you want to teleport
 1. For Teleportation Area and Anchors, under Teleportation Configuration, add _Teleportation Provider -> XR Origin_
 
-### Step 3: Interaction examples
+---
+
+### Interaction examples
+
+Google for tutorials (note that many of those might be outdated and need some adjustments with new Unity 6 version).
 
 #### Haptic feedback and teleportation
 
@@ -226,11 +230,5 @@ Remember to save the scene and test your app (_Build and run_) all the time when
     - Add _UpdateScore_ script to the text object
       - Connect with _PinCheck_ script
       - Update score when a pin is hit
-
-Some related tutorials, search for more:
-
-- Quest Hand Tracking: <https://youtu.be/mJ3fygb9Aw0>
-- Poke Interaction: <https://youtu.be/yUmrtwflmeg>
-- Hand Menu: <https://youtu.be/6PSLfRsN89g>
 
 ---
