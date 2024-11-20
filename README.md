@@ -1,6 +1,6 @@
 # XR-teknologiat TX00EY72 - Unity
 
-Kurssin Unity-osuuden materiaali.
+Kurssin Unity-osuuden materiaali. (Huom: Tämä branch on uudemmalle Unity 6 -versiolle.)
 
 ## Tehtävät ja pisteytys
 
