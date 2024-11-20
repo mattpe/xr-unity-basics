@@ -78,18 +78,17 @@ Remember to save the scene and test your app (_Build and run_) all the time when
 
 #### Teleport movement
 
-1. Add _Teleportation Provider_ component to _XR origin_
-    - _System:_ Locomotion System
+1. Check that _Teleportation_ game object inside _XR Origin_ has a _Teleportation Provider_ component
 1. Add _XR -> Teleportation Area_ on top of the floor level
     - Create a _material_ for it, to easily see where the area is
-    - Test by pointing areas with controllers and using button under middle finger
+    - Test by pointing areas with controllers and using the teleportation action (default control: thumbstick)
 1. Add platforms (using _3D Cube_ game objects) to different levels that you can teleport to
 1. Add _XR -> Teleportation Anchor_
     - Place _Teleportation Anchor_ under the platform, scale appropriately
     - Place _Anchor_ child object on platform where you want to teleport
 1. For Teleportation Area and Anchors, under Teleportation Configuration, add _Teleportation Provider -> XR Origin_
 
-### Step 3: Interactions
+### Step 3: Interaction examples
 
 #### Haptic feedback and teleportation
 
