@@ -8,7 +8,7 @@ This can be done individually or in pairs.
 
 - Works in VR headset (Oculus Quest 2, or similar)
 - Use of VR controllers: 1 point
-- Teleportation or other movement system implemented: 1 point
+- Some movement system implemented: 1 point
 - Interactions with different kind of objects implemented: 1 point 
 - Use of your own 3D models or assets and other features implemented: max. 3 points
 
@@ -76,23 +76,25 @@ Remember to save the scene and test your app (_Build and run_) all the time when
     - Add _Rigidbody_ component
 1. Test movement by using controller joysticks
 
-#### Teleport movement
-
-1. Check that _Teleportation_ game object inside _XR Origin_ has a _Teleportation Provider_ component
-1. Add _XR -> Teleportation Area_ on top of the floor level
-    - Create a _material_ for it, to easily see where the area is
-    - Test by pointing areas with controllers and using the teleportation action (default control: thumbstick)
-1. Add platforms (using _3D Cube_ game objects) to different levels that you can teleport to
-1. Add _XR -> Teleportation Anchor_
-    - Place _Teleportation Anchor_ under the platform, scale appropriately
-    - Place _Anchor_ child object on platform where you want to teleport
-1. For Teleportation Area and Anchors, under Teleportation Configuration, add _Teleportation Provider -> XR Origin_
+**Try to implement your own ideas and search for tutorials on the internet (note that many of those might be outdated and need some adjustments with new Unity 6 version).**
 
 ---
 
 ### Interaction examples
 
-Google for tutorials (note that many of those might be outdated and need some adjustments with new Unity 6 version).
+(Might need some adjustments with the Unity 6 version.) 
+
+#### Teleport movement
+
+1. Check that _Teleportation_ game object inside _XR Origin_ has a _Teleportation Provider_ component
+1. Add _XR -> Teleportation Area_ on top of the floor level
+    - Create a _material_ for it, to easily see where the area is
+    - Test by pointing areas with controllers and using the teleportation action
+1. Add platforms (using _3D Cube_ game objects) to different levels that you can teleport to
+1. Add _XR -> Teleportation Anchor_
+    - Place _Teleportation Anchor_ under the platform, scale appropriately
+    - Place _Anchor_ child object on platform where you want to teleport
+1. For Teleportation Area and Anchors, under Teleportation Configuration, add _Teleportation Provider -> XR Origin_
 
 #### Haptic feedback and teleportation
 
