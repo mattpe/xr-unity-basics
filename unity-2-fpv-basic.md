@@ -25,7 +25,7 @@ Grading 2 + 1 points.
     - check the position (should be placed at origin in scene) and set the size larger (_Inspector -> Transform component_)
 1. Add Player (an empty game object) to the scene
     - add _Rigidbody_ component, set _Interpolate: interpolate_ and _Collision Detection: continuous_
-    - add visible PlayerObject as a child of Player (use e.g. _capsule_)
+    - add visible 3D object as a child of Player (this acts as the player model, use e.g. _capsule_)
     - add Orientation (empty GameObject) as a child of Player for keeping track of orientation
     - add CameraPosition (empty GameObject) as a child of Player for linking with the Main Camera's position
 1. Panning and tilting the camera view: Add `CameraController` script component to _Main Camera_
@@ -38,6 +38,14 @@ Grading 2 + 1 points.
     - add some _drag_ to Rigidbody
 
 ### Example scripts
+
+Check Unity scripting reference for more details about the methods and properties used in these scripts: [Unity Scripting Reference](https://docs.unity3d.com/ScriptReference/).
+
+Also check documentation about Unity's input system and event handling:
+
+- [Input Manager](https://docs.unity3d.com/Manual/class-InputManager.html)
+- [Event functions](https://docs.unity3d.com/Documentation/Manual/event-functions.html)
+- [Event function execution order](https://docs.unity3d.com/Manual/execution-order.html)
 
 #### CameraController.cs
 
