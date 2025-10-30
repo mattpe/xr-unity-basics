@@ -29,7 +29,7 @@ Grading 2 + 1 points.
     - add Orientation (empty GameObject) as a child of Player for keeping track of orientation
     - add CameraPosition (empty GameObject) as a child of Player for linking with the Main Camera's position
 1. Panning and tilting the camera view: Add `CameraController` script component to _Main Camera_
-    - Check/fix Unity's input settings (_Edit -> Project Settings... -> Player tab -> Active Input Handling: Both_)
+    - change Unity settings to support legacy input system: (_Edit -> Project Settings... -> Player tab -> Active Input Handling: Both_)
     - attach Player's _CameraPosition_ object to script's _CameraPosition_ property in _Inspector_
     - attach Player's _Orientation_ object to script's _Orientation_ property
     - set the _Sensitivy_ values (something between 100-1000 should be ok) in _Inspector_
@@ -51,8 +51,6 @@ Also check documentation about Unity's input system and event handling:
 #### CameraController.cs
 
 ```csharp
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
@@ -96,8 +94,6 @@ public class CameraController : MonoBehaviour
 #### PlayerController.cs
 
 ```csharp
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -130,11 +126,11 @@ public class PlayerController : MonoBehaviour
         // Move to correct direction
         rb.AddForce(movingDirection.normalized * speed, ForceMode.Force);
         // Do not exceed maximum speed
-        Vector3 groundVelocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        Vector3 groundVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
         if (groundVelocity.magnitude > speed)
         {
             Vector3 maxVelocity = groundVelocity.normalized * speed;
-            rb.velocity = new Vector3(maxVelocity.x, rb.velocity.y, maxVelocity.z);
+            rb.linearVelocity = new Vector3(maxVelocity.x, rb.linearVelocity.y, maxVelocity.z);
         }
     }
 }
