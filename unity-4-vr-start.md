@@ -2,6 +2,8 @@
 
 ## Step 1: Preparing for VR development in Unity
 
+Reading:
+
 - [Getting started with VR development in Unity](https://docs.unity3d.com/Manual/VROverview.html)
 - [Get Started with Oculus in Unity](https://developer.oculus.com/documentation/unity/unity-gs-overview/)
 

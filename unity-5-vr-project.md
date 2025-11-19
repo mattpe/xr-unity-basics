@@ -8,9 +8,9 @@ This can be done individually or in pairs.
 
 - Works in VR headset (Oculus Quest 2, or similar)
 - Use of VR controllers: 1 point
-- Some movement system implemented: 1 point
+- Some sensible movement system implemented: 1 point
 - Interactions with different kind of objects implemented: 1 point 
-- Use of your own 3D models or assets and other features implemented: max. 3 points
+- Use of your own 3D models or assets and some other fancy features implemented: max. 3 points
 
 ## Grading
 
@@ -30,13 +30,13 @@ Remember to save the scene and test your app (_Build and run_) all the time when
 
 1. Create a new Unity 6 project: choose _3D (Built-in Render Pipeline) core_ template
    - Add ground plane (e.g. _3D -> Plane_) and some material to it
-   - (or continue a previous FPV project)  
+   - (or continue previous FPV project)  
 1. _Edit -> Project Settings... -> XR Plugin management -> Install_ -> Choose _Oculus_ plugin for desktop & Android platforms
 1. _File -> Build Profiles_ -> Check [previous instructions](unity-4-vr-start.md) for Android platform build settings
-1. Go to _Window -> Package Manager_, choose _Packages: Unity Registry_ and install:
-    - _XR Interaction Toolkit_, (tested with version 3.0.7), restart if prompted
+1. Go to _Window -> Package Management -> Package Manager_, choose _Unity Registry_ on the left panel and install:
+    - _XR Interaction Toolkit_, (tested with version 3.2.2), (restart editor if prompted)
     - _XR Interaction Toolkit_ -> _Samples_ tab -> import _Starter Assets_
-    - If project validation screen appears, click _Fix All_
+    - If _Project Validation_ screen appears, click _Fix All_
 
 ### Step 2: Basic movement in VR
 
@@ -45,14 +45,14 @@ Remember to save the scene and test your app (_Build and run_) all the time when
       - In Inspector: Click _Add to Controller Input Action Manager default_
     - Do same for the right controller
 1. _Edit -> Project Settings -> Preset Manager_
-    - Check/add filters for left and right controller
+    - Check that filters for left and right controller exist (or add them by clicking _+_)
 1. Add to scene: _GameObject -> XR -> Interaction Manager_
 1. Add to scene: _XR Origin (XR Rig)_ prefab, found in _Starter Assets -> Prefabs_
     - Check _XR Origin_, it should have _Input Action Manager_ script component
-    - _Action Assets_ list should have one element: _XRI Default Input Actions_
-    - _XR Origin_ comes with a new _Main Camera_ as a child game object and replaces the original _Player_ game object -> deactive/delete existing _Player_ and _Main Camera_
-    - Both hand controllers are also children of _XR Origin_ object
-1. Add default interactions. From _Starter Assets/Presets_ folder, find
+    - Script's _Action Assets_ list should have one element: _XRI Default Input Actions_
+    - _XR Origin_ comes with a new _Main Camera_ as a child game object and replaces the original _Player_ game object -> deactive/delete existing _Main Camera_ (and _Player_) game objects
+    - Note that both hand controllers are also children of _XR Origin_ game object
+1. Add default interactions. From _Starter Assets/Presets_ folder, find:
     - _XRI Default Continuous Move_
     - _XRI Default Continuous Turn_
     - _XRI Default Snap Turn_ 
@@ -74,15 +74,17 @@ Remember to save the scene and test your app (_Build and run_) all the time when
 1. Add a _Sphere_ to scene
     - _Scale_: .5,.5,.5
     - Add _Rigidbody_ component
-1. Test movement by using controller joysticks
+1. Test movement by using the joysticks of the controllers in the VR headset
 
 **Try to implement your own ideas and search for tutorials on the internet (note that many of those might be outdated and need some adjustments with new Unity 6 version).**
 
 ---
 
-### Interaction examples
+### XR Interaction examples and ideas
 
 (Might need some adjustments with the Unity 6 version.) 
+
+These are just examples. No need to implement them in your project. You can choose your own ideas for the project and search the internet for suitable tutorials and instructions. There are plenty of Youtube tutorials and other resources available online. **Just remember to list all the sources you have used in your project in your project report.**
 
 #### Teleport movement
 
@@ -170,7 +172,7 @@ Remember to save the scene and test your app (_Build and run_) all the time when
     - Add _Rigidbody_, _mass_: 0.2
 1. Test: Grab the ball (sphere) with the controller and try to bowl the pins
 
-#### Example: A Bowling game
+#### Example app: Bowling game
 
 1. Add empty GameObject, rename to _BallReturner_
     - Add _BoxCollider_
