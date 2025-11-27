@@ -62,7 +62,7 @@ Remember to save the scene and test your app (_Build and run_) all the time when
 1. Movement setup is found under _XR origin -> Locomotion_ game object
     - Choose movement objects and see inspector for more details
     - For turning, you can use _Continuous Turn Provider (Action-Based)_ or _Snap Turn Provider (Action-Based)_ (snap is the default in Oculus Quest 2)
-1. If you want more control over physical appereance of the player, edit _XR Origin_:
+1. _XR Origin_ uses _Character Controller_ component for controls, physics, collision detection, etc. by default. Optionally, if you want more control over physical appereance of the player, edit _XR Origin_:
     - Disable _Character Controller_ component
     - Add _Rigidbody_ component
       - _Mass_ e.g.: 1000
