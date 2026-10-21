@@ -52,7 +52,7 @@ Unity uses C# (a popular and high-level programming language) for scripting. Dev
 
 1. Check [Unity in Wikipedia](https://en.wikipedia.org/wiki/Unity_(game_engine))
 1. Install [Unity personal](https://store.unity.com/download?ref=personal) (there is also a [student plan](https://unity.com/products/unity-student) available)
-1. Take a look at [Unity Essentials](https://learn.unity.com/pathway/664b6225edbc2a01973f4f19)
+1. Take a look at [Unity Essentials](https://learn.unity.com/pathway/unity-essentials)
 1. Make a roll-a-ball game by following [this tutorial](https://learn.unity.com/project/roll-a-ball), (max 2 points)
 1. Add your own twist to the roll-a-ball game (something extra, use your imagination, max 1 point)
 1. Submit your Unity project to the related Oma assignment **before deadline**: Create a **zip**-file of your project folder containing only `Assets` and `ProjectSettings` subfolders (_NOTE:_ arj, rar, etc. other formats are not a zip file)
