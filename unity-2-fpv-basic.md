@@ -38,6 +38,14 @@ Grading 2 + 1 points.
     - set the speed of movement to something like 50
     - add some _drag_ to Rigidbody
 
+### Tips for testing the game
+
+- Keep both windows (_Scene_ and _Game_) open in the Unity Editor to see how the game looks and behaves.
+- Use _Play_ button to start the game and test the controls.
+- Click the _Game_ window to control it with mouse, use _Esc_ to exit the game and to free your mouse pointer.
+- Remember to stop the game before making _permanent_ changes to the scene. You can test changes in _Play_ mode, but they will be lost when you stop the game.
+- Keep _Console_ window open to see if there are any errors or warnings in your scripts. You can open it from _Window -> General -> Console_.
+
 ### Example scripts
 
 Check Unity scripting reference for more details about the methods and properties used in these scripts: [Unity Scripting Reference](https://docs.unity3d.com/ScriptReference/).
