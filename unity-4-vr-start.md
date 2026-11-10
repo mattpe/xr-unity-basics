@@ -18,8 +18,6 @@ You need to sign up for Oculus developers account (and have an Facebook account)
 
 Grading: 0-2 points.
 
-**NOTE:** These are Unity 6 (6000.0.26) version of instructions, build might fail with some project setups.
-
 1. You can make a copy of your previous app (with 360 skybox and some POI) and try to convert it to VR app:
     - Can bed used as a starting point for the first VR app
     - Disable the _Camera Controller_ script component in _Main Camera_ game object
@@ -29,18 +27,11 @@ Grading: 0-2 points.
       1. Choose _Render Camera_: _Main Camera_
       1. Set distance of Canvas closer to the camera (_Plane Distance_ value e.g. to 8 units)
 1. Or create a new project/scene with some 3D objects and a skybox, check settings for _Canvas_ above if needed
-1. _Edit -> Project Settings... -> XR Plugin management -> Install_ -> Choose _Oculus_ plugin for desktop & Android platforms
-    - If Android platform is not available, you need to install it via Unity Hub to your Unity editor  
-1. _File -> Build Profiles_ -> Choose Android platform
-    - _Texture Compression_: ASTC
-    - _Switch platform_ to Android
-1. (Optional, default setting are ok in Unity 6, SKIP this step for now) _Add Build Profile_ and click _Customize Player Settings.._ on the new profile:
-    - _Minimum API level_: must be at least 29 (Android 10)
-    - _Target API level_: 32 (Android 12.0, 12L)
-    - _Scipting Backend_: IL2CPP
-    - _Target Architectures_: only ARM64
-    - _Active Input Handling_: Input System X
-    - Click _Switch profile_
+1. _Edit -> Project Settings... -> XR Plugin management -> Install_ -> Choose _OpenXR_ plugin for desktop & Android platforms
+    - If Android platform is not available, you need to install it via Unity Hub to your Unity editor
+    - Choose _OpenXR_ under _XR Plugin management_ and enable _Meta Quest Support_
+1. _File -> Build Profiles_ -> _Add Build Profile_ for Android platform
+    - Set _Texture Compression_: ASTC
 1. Add _Tracked Pose Driver_ component to _Main Camera_ to enable head tracking features
 1. Prepare your Oculus headset for development:
     - On Windows, you need to download and install [Oculus ADB Drivers](https://developer.oculus.com/downloads/package/oculus-adb-drivers/)
