@@ -24,19 +24,23 @@ These instructions can be use as a starting point for your project development. 
 
 You can use one of the basic FPV apps (assignment 2 or 3) as a starting point for this example. You can also start from scratch if you like.
 
-Remember to save the scene and test your app (_Build and run_) all the time when doing the development or modifications!
+Remember to save the scene and test your app (_Build and run_) all the time when doing the development or modifications! You can also try testing with the [Meta XR simulator](https://developers.meta.com/vr/documentation/unity/xrsim-getting-started/).
 
-### Step 1: Prepare project for Oculus device
+After a succesful build it's a good idea to make a backup e.g. by zipping your project folder if version control is not used.
 
-1. Create a new Unity 6 project: choose _3D (Built-in Render Pipeline) core_ template
+### Step 1: Prepare project for Meta Quest (Oculus) device
+
+1. Create a new Unity 6 project: choose _Universal 3D_ template
    - Add ground plane (e.g. _3D -> Plane_) and some material to it
-   - (or continue previous FPV project)  
-1. _Edit -> Project Settings... -> XR Plugin management -> Install_ -> Choose _Oculus_ plugin for desktop & Android platforms
+1. _Edit -> Project Settings... -> XR Plugin management -> Install_ -> Choose _OpenXR_ plugin for desktop & Android platforms
+    - If Android platform is not available, you need to install it via Unity Hub to your Unity editor
+    - Choose _OpenXR_ under _XR Plugin management_ and enable _Meta Quest Support_ (Quest (1) can be disabled)
 1. _File -> Build Profiles_ -> Check [previous instructions](unity-4-vr-start.md) for Android platform build settings
 1. Go to _Window -> Package Management -> Package Manager_, choose _Unity Registry_ on the left panel and install:
-    - _XR Interaction Toolkit_, (tested with version 3.2.2), (restart editor if prompted)
+    - _XR Interaction Toolkit_, (tested with version 3.6.1), (restart editor if prompted)
     - _XR Interaction Toolkit_ -> _Samples_ tab -> import _Starter Assets_
-    - If _Project Validation_ screen appears, click _Fix All_
+    - If _Project Validation_ screen appears, click _Fix All_ / do as adviced
+1. Try _Build and run_ (This will take some time for the first build, later builds are incremental and should be faster)
 
 ### Step 2: Basic movement in VR
 
